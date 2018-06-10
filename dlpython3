@@ -1,7 +1,6 @@
-#DeepLearning Demo in Python3
-# gotcha notes:
+#DeepLearning in Python3
 # xrange() is named range() in Python3 
-# print requires parentheses () 
+# print requires parentheses () it took me 20 minutes to know it.
 
 
 from numpy import exp, array, random, dot
@@ -27,6 +26,7 @@ class NeuralNetwork():
     # The derivative of the Sigmoid function.
     # This is the gradient of the Sigmoid curve.
     # It indicates how confident we are about the existing weight.
+    
     def __sigmoid_derivative(self, x):
         return x * (1 - x)
 
@@ -34,6 +34,7 @@ class NeuralNetwork():
     # Adjusting the synaptic weights each time.
     def train(self, training_set_inputs, training_set_outputs, number_of_training_iterations):
         for iteration in range(number_of_training_iterations):
+        
             # Pass the training set through our neural network (a single neuron).
             output = self.think(training_set_inputs)
 
